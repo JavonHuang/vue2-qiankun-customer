@@ -11,7 +11,7 @@ let instance = null
 
 function render (props = {}) {
   const { container } = props
-  const router = getRouter(props.mainRouterPath ? props.mainRouterPath : '')
+  const router = getRouter(props.mainRouterPath ? props.mainRouterPath : '', props.errorRouter)
   // router.beforeEach((to, from, next) => {
   //   console.log(to, from, next)
   //   next()
