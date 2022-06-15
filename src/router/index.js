@@ -3,8 +3,7 @@ import VueRouter from 'vue-router'
 
 Vue.use(VueRouter)
 
-const getRouter = (mainRouterPath, _errorRouter) => {
-  const errorRouter = _errorRouter || '404'
+const getRouter = (mainRouterPath) => {
   const basePath = ''
   const routes = [
     {
@@ -21,10 +20,6 @@ const getRouter = (mainRouterPath, _errorRouter) => {
       path: `${mainRouterPath}${basePath}/404`,
       name: '404',
       component: resolve => require(['./../page/404'], resolve)
-    },
-    {
-      path: `${mainRouterPath}${basePath}/*`,
-      redirect: `${errorRouter}`
     }
   ]
   return new VueRouter({
