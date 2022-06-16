@@ -5,6 +5,8 @@ import App from './App.vue'
 import getRouter from './router/index'
 
 Vue.config.productionTip = false
+// 主应用中引用，在子应用注册使用
+Vue.use(testlib.default)
 
 let router = null
 let instance = null
