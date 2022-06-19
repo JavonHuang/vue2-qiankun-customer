@@ -34,7 +34,7 @@ module.exports = {
     },
     output: {
       // 把子应用打包成 umd 库格式(必须)
-      library: `${name}-[name]`,
+      library: `${name}`,
       libraryTarget: 'umd',
       jsonpFunction: `webpackJsonp_${name}`
     }
