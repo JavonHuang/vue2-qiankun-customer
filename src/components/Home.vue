@@ -7,6 +7,9 @@
 
 <script>
 export default {
-
+  mounted () {
+    console.log('ce', this.$route.query)
+    console.log('ce', this.$route.params)
+  }
 }
 </script>

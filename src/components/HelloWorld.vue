@@ -13,9 +13,10 @@ export default {
   //     user: state => state.user
   //   })
   // },
-  // mounted () {
-  //   console.log('ce', this.user)
-  // },
+  mounted () {
+    console.log('ce', this.$route.query)
+    console.log('ce', this.$route.params)
+  }
   // methods: {
   //   gotoSubReact () {
   //     history.pushState(null, 'sub-react', '/sub-react')
