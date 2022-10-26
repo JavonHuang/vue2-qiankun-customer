@@ -14,14 +14,6 @@ let instance = null
 function render (props = {}) {
   const { container } = props
   const router = getRouter(props.mainRouterPath ? props.mainRouterPath : '')
-  // 校验路由
-  router.beforeEach((to, from, next) => {
-    if (!to.name && to.fullPath !== '/404') {
-      router.push({ path: props.errorRouter })
-    } else {
-      next()
-    }
-  })
   instance = new Vue({
     router,
     render: h => h(App)

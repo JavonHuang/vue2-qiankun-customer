@@ -20,7 +20,8 @@ const getRouter = (mainRouterPath) => {
       path: `${mainRouterPath}${basePath}/404`,
       name: '404',
       component: resolve => require(['./../page/404'], resolve)
-    }
+    },
+    { path: '*', redirect: '/404' }
   ]
   return new VueRouter({
     base: '/',
